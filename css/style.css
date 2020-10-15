@@ -4,8 +4,6 @@
 }
 body{  
     font-family: 'Oswald', sans-serif;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 .pre-loader{
     position: fixed;
@@ -108,37 +106,13 @@ body{
     letter-spacing: 5px;
     border-radius: 3px;
 }
-.portada1{
-    transform-style: preserve-3d;
-    overflow-x: hidden;
-    transform-style: inherit;
-}
-.portada1:before{
-    background: 50% 50% / cover;
-}
-.portada1::before{
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    display: block;
-    background-image: url(img/fondo3.jpg);
-    background-size: cover;
-    transform-origin: center center 0;
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-.portada1 + {
-    font-weight: normal;
-}
+
 .portada{
     position: absolute;
     z-index: -3;   
     width: 100%; 
 }
+
 .fondo5{
     display: none;
 }
@@ -173,6 +147,7 @@ body{
     flex-direction: column;
     margin-top: 3rem;
 }
+
 .bienvenida h1{
     letter-spacing: 8px;
     font-size: 45px;
@@ -1128,9 +1103,31 @@ p{
 .pagina8{
     position: absolute;
     z-index: -1;
-    margin-left: -1rem;
     margin-top: 3rem;
     width: 100%;
+    height: 200px;
+    background-color: #000000;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.pagina8 i{
+    position: absolute;
+    background: fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%,90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
 }
 .pagin81{
     margin-top: 3rem;
