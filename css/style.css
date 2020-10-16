@@ -4,56 +4,41 @@
 }
 body{  
     font-family: 'Oswald', sans-serif;
+    max-width: 1500px;
 }
-.pre-loader{
+.fondo i{
+    position: absolute;
+    top: -250px;
+    background: rgba(255,255,255,0.5);
+    animation: animateestrellas linear infinite;
+}
+@keyframes animateestrellas{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(1000vh);
+    }
+}
+.pre-loader img{
     position: fixed;
-    left: 50%;
+    left: 48%;
     top: 50%;
     z-index: 1000;
+    animation: animate 0.2s ease infinite;;
 }
-.pre-loader span{
-    height: 2em;
-    width: 2em;
-    background: white;
-    display: block;
-    position: absolute;
-    left: 0;
-    top:0;
-    border-radius: 50%;
-    animation: wave 2s ease-in-out infinite;
-}
-.pre-loader span:nth-child(1){
-    left: -4.5em;
-    animation-delay: 0s;
-}
-.pre-loader span:nth-child(2){
-    left: -1.5em;
-    animation-delay: 0.1s;
-}
-.pre-loader span:nth-child(3){
-    left: 1.5em;
-    animation-delay: 0.2s;
-}
-.pre-loader span:nth-child(4){
-    left: 4.5em;
-    animation-delay: 0.3s;
-}
-@Keyframes wave{
-    0%,
-    75%,
-    100%{
-        transform: translateY(8) scale(1);    
-    }
-    25%{
-        transform: translateY(2.5em);
+@Keyframes animate
+{
+    0%,100%{
+        transform: translateY(-2px);
     }
     50%{
-        transform: translateY(-2.5em) scale(1.1);
+        transform: translateY(2px);
     }
 }
 .header{
     display: flex;
-    height: 60px;
+    height: 12%;
     background-color: #000000;
     flex-wrap: wrap;
     align-items: center;
@@ -77,14 +62,14 @@ body{
     display: none;
 }
 .menu ul{
-    display: flex;
+    display: flex ;
     list-style: none;
     justify-content: flex-end;
     margin: 0;
     padding: 0;
     color:white;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 16px;
     overflow: hidden;
     transition: 0.2s;
 }
@@ -106,25 +91,28 @@ body{
     letter-spacing: 5px;
     border-radius: 3px;
 }
-
 .portada{
     position: absolute;
     z-index: -3;   
     width: 100%; 
+    height: 100%;
+    background-color: #01070a;
+    margin-left: 1em;
 }
-
-.fondo5{
-    display: none;
-}
-.fondo3{
-    display: none;
+.portada i{
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
 }
 .inicial{
     display: flex;
-    margin-top: 8rem;
+    margin-top: 14%;
+    width: auto;
+    height: auto;
 }
 .redessociales1{
-    margin-top: 12rem;
+    margin-top: 18%;
     display: flex;
     flex-direction: column;
 }
@@ -133,19 +121,19 @@ body{
 }
 .retrato{
     display: flex;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .retrato1{
     position: absolute;
-    margin-top: -8rem;
+    margin-top: -10%;
 }
 .bienvenida{
     display: flex;
     color: white;
     justify-content: flex-start;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 4%;
 }
 
 .bienvenida h1{
@@ -156,10 +144,10 @@ body{
     margin-top: 10px;
 }
 .pagina2{
-    height: 500px;
+    height: auto;
     position: absolute;
     background-color: #F2F2F2;
-    margin-top: 2%;
+    margin-top: 1%;
     width: 100%;    
     z-index: -2;
 }
@@ -308,7 +296,8 @@ p{
 .pagina1{
     display: flex;
     justify-content: space-between;
-    margin-top: -1rem;
+    height:  auto;
+    margin-top: -5%;
 }
 .sobremi2 h1{
     font-size: 40px;
@@ -317,9 +306,8 @@ p{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    margin-top: 5rem;
     font-size: 17px;
-    margin-top: 4rem;
+    margin-top: 10%;
     letter-spacing: 0.5px;
     line-height: 21px;
 } 
@@ -415,12 +403,12 @@ p{
         transition-delay: 0.5s;
     }
 .pagina3 {
-    height: 500px;
+    height: 100%;
     position: absolute;
     background-color: #ccc8c8;
     width: 100%;
     z-index: -3;
-    margin-top: 2rem;
+    margin-top: 5%;
 }
 .habilidades{
     display: flex;
@@ -430,6 +418,11 @@ p{
     position: absolute;
     margin-top: 12rem;
     z-index: -3;
+    transition: 1s;
+}
+.cuadro1[data-scroll="in"]{
+    transform: scaleX(1);
+    transition-delay: 0.3s;
 }
 .habilidades1{
     position: absolute;
@@ -509,9 +502,9 @@ p{
     border-radius: 0px 5px 5px 0px; 
     background: #fff;
     box-shadow: inset 0 0 2px #000;
-    animation: animate 4s ease-in-out forwards;
+    animation: animacion 4s ease-in-out forwards;
 }
-@Keyframes animate
+@Keyframes animacion
 {
     from{
         width: 0;
@@ -588,9 +581,9 @@ p{
     border-radius: 0px 5px 5px 0px; 
     background: #fff;
     box-shadow: inset 0 0 2px #000;
-    animation: animate 4s ease-in-out forwards;
+    animation: animacion1 4s ease-in-out forwards;
 }
-@Keyframes animate
+@Keyframes animacion1
 {
     from{
         width: 0;
@@ -602,7 +595,7 @@ p{
     height: 0px;
 }
 .pagina4{
-    height: 520px;
+    height: 100%;
     position: absolute;
     background-color: #F2F2F2;
     width: 100%;
@@ -654,7 +647,7 @@ p{
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top: 7rem;
+    margin-top: 6rem;
     margin-left: 74%;
 }
 .pagina5{
@@ -760,9 +753,9 @@ p{
     transition: 0.5s;
     background: #000000;
     transform-style: preserve-3d;
-    transform: translate3d(-50%,-50%,50px);
-    z-index: 1;
-    opacity: 1;   
+    transform: translate3d(-50%,-50%,0px);
+    opacity: 1;
+    z-index: 10;   
 }
 .pagina5 .box .imgkhago{
     position: absolute;
@@ -772,10 +765,10 @@ p{
     transition: 0.5s;
     transform-style: preserve-3d;
     transform: translate3d(-50%,-50%,0px) rotate(-10deg);
-    z-index: 20;
+    z-index: 11;
 }
 .pagina5 .box:hover .imgkhago{
-    transform: translate3d(-50%, -50%,100px) rotate(-10deg);
+    transform: translate3d(-50%,-50%,100px) rotate(-10deg);
 }
 
 .fondo2{
@@ -794,11 +787,14 @@ p{
 .collage{
     margin-top: 2rem;
 }
+.carrusel1{
+    display: none;
+}
 .pasatiempos{
     margin-top: 6rem;
 }
 .pagina7{
-    height: 500px;
+    height: 560px;
     position: absolute;
     background-color:#F2F2F2;
     width: 100%;
@@ -1001,7 +997,7 @@ p{
     .popup2{
         flex-direction: column;
         height: 100%;
-        max-height: 800px;
+        max-height: 200px;
     }
 }
 /*CERTIFICADOS MARKETING¨*/
@@ -1112,7 +1108,7 @@ p{
 }
 .pagina8 i{
     position: absolute;
-    background: fff;
+    background: #fff;
     border-radius: 50%;
     animation: animate linear infinite;
 }
@@ -1132,12 +1128,46 @@ p{
 .pagin81{
     margin-top: 3rem;
 }
-
 .portafolio1{
+    position: absolute;
     align-items: flex-start;
-    margin-top: 7rem;
-    color:white;
+    margin-left: 20%;
+    margin-top: 8rem;
     letter-spacing: 1rem;
+    z-index: 3;
+}
+.portafolio1 h1{
+    font-size: 20px;
+    color: #fff;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    color: transparent;
+}
+.portafolio1 h1:before{
+    content: attr(data-text);
+    position: absolute;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+    border-right: 1px solid #fff;
+    animation: type 8s steps(9) infinite;
+    white-space: nowrap;
+    z-index: 3;
+}
+@keyframes type{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
 }
 .logo2{
     display: flex;
@@ -1210,9 +1240,18 @@ p{
 .pagina11{
     position: absolute;
     z-index: -1;
-    margin-left: -1rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
     width: 100%;
+    height: 200px;
+    background-color: #000000;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.pagina11 i{
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
 }
 .pagina111{
     display: flex;
@@ -1247,6 +1286,9 @@ p{
     margin-top: 5rem;
     color: #fff;
     font-size: 20px;
+    
+}
+.redessociales2 a{
     text-decoration: none;
 }
 .nombre{
@@ -1318,7 +1360,7 @@ input:focus~.barra::before, textarea:focus~.barra::before{
 .contactar::before{
     content: '';
     height: 2px;
-    width: 0%;
+    width: 100%;
     bottom: 0;
     position: absolute;
     background: linear-gradient(to right, #3E5151, #DECBA4);
@@ -1343,42 +1385,69 @@ input:focus~.barra::before, textarea:focus~.barra::before{
     cursor: pointer;
 }
 .footer{
-    height: 200px;
+    height: 40%;
     position: absolute;
     background-color: #000000;
     margin-top: 1rem;
     width: 100%;    
     z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*responsive formulario*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
     form{
         width: 100%;
+        margin-left: 10%;
+    }
+    .redessociales2{
+        margin-left: 10%;
+        margin-top: -15%;
+    }
+    .iconosrds{
+        margin-left: 20%;
+        margin-top: -5%;
+    }
+    .pagina10{
+        width: 100%;
+        height: 1000px;
     }
 }
 
 @media screen and (max-width:450px){
     form{
         width: 100%;
+        margin-left: 22%;
     }
 }
 
 @media screen and (max-width:300px){
     form{
         width: 100%;
+        margin-left: 22%;
     }
 }
 /*responsive menu*/
 @media only screen and (max-width: 600px){
+    .logo1{
+        margin-left: 15%;
+    }
+    .header{
+        display: flex;
+        height: 8%;
+    }
     .menu-icono{
         display: absolute;
         z-index: 30;
         cursor: pointer;
+        margin-left: -10%;
         padding: 0.5rem 0;
     }
-    .menu {
+    .menu{
         width: 100%;
-        margin-top: 1rem;   
+        margin-top: 1rem; 
+        height: 5%;  
     }
     .menu ul{
         display: none;
@@ -1403,7 +1472,7 @@ input:focus~.barra::before, textarea:focus~.barra::before{
 @media screen and (max-width:700px){
     .portada{
         width: 100%;
-        height: 850px;
+        height: 90%;
     }
     .pagina1{
         margin-top: 2rem;
@@ -1415,10 +1484,7 @@ input:focus~.barra::before, textarea:focus~.barra::before{
     .redessociales1{
         display:none;
     }
-    .pagina10{
-        width: 800px;
-        height: 1000px;
-    }
+    
     .inicial{
         display: flex;
         flex-direction: column;
@@ -1426,9 +1492,9 @@ input:focus~.barra::before, textarea:focus~.barra::before{
     .bienvenida{
         display: flex;
         justify-content: center;
-        margin-top: -38rem;
-        margin-left: 10%;
-        font-size: 11px;
+        margin-top: -35rem;
+        margin-left: 5%;
+        font-size: 1px;
         letter-spacing: 1px;
         text-align: center;
     }
@@ -1438,18 +1504,22 @@ input:focus~.barra::before, textarea:focus~.barra::before{
         margin-top: 18rem;
         margin-left: 15%;
     }
+    .retrato1{
+        margin-top: -8rem;
+        margin-left: 2%;
+    }
     .vervideo{
-        margin-top: 24rem;
-        width: 80%;
+        margin-top: 22rem;
+        width: 100%;
     }
 }
 /*responsive SOBRE MÍ*/
-@media screen and (max-width:600px){
+@media screen and (max-width:700px){
     .pagina2{
         position: absolute;
         width: 100%;
         height: 850px;
-        margin-top: 2rem;
+        margin-top: 5rem;
         z-index: -5;
     }
     .datos{
@@ -1472,6 +1542,7 @@ input:focus~.barra::before, textarea:focus~.barra::before{
         flex-wrap: flex-start;
         flex-direction: column;
         margin-left: 3rem;
+        margin-top: 60px;
     }
     .sobremi h1{
         font-size: 20px;
@@ -1538,44 +1609,52 @@ input:focus~.barra::before, textarea:focus~.barra::before{
     .pagina4{
         position: absolute;
         width: 100%;
-        height: 850px;
+        height: 750px;
         margin-top: 12rem;
         z-index: -5;
 }
     .pasatiempos{
         width: 80%;
-        margin: 35rem 10%;
+        margin: 30rem 10%;
     }
     .collage{
         display: none;
     }
+    .carrusel1{
+        display: flex;
+        align-items: inline-block;
+        margin-top: 18em;
+        position: absolute;
+        z-index: 3;
+        margin-left: 15%;
+    }
 }
 /*RESPONSIVE CERTIFICADOS*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
 .pagina6{
-    height: 850px;
+    height: 100%;
     position: absolute;
     background-color: #ccc8c8;
     width: 100%;
-    z-index: -2;
-    margin-top: -33rem;
+    z-index: -1;
+    margin-top: -28em;
 }
-
 .caja2{
     display: none;
 }
 .titulo33{  
     display: flex;
-    margin-top: -48rem;
+    margin-top: -42rem;
 }
-.titulo33 h1{
+.titulo3 h1{
     font-size: 25px;
     margin-left: 40%;
 }
 .certificados{
     display: flex;
-    margin-top: -22rem;
+    margin-top: -12rem;
     margin-left: 10%;
+    width: 80%;
 }
 }
 /*RESPONSIVE SERVICIOS*/
@@ -1600,38 +1679,52 @@ input:focus~.barra::before, textarea:focus~.barra::before{
     .pagina8{
         position: absolute;
         z-index: -1;
-        margin-left: -1rem;
         margin-top: 68rem;
         width: 100%;
     }
     .pagin81{
         margin-top: 68rem;
     }
+    .portafolio1{
+        margin-left: 40%;
+        margin-top: 75rem;
+    }
+    .logo2{
+        
+        margin-top: 72rem;
+        margin-left: 20em;
+    }
 }
 /*responsive PORTAFOLIO*/
 @media screen and (max-width:700px){
     .pagina9{
-        height: 1100px;
+        height: 2400px;
         position: absolute;
         background-color:#F2F2F2;
         width: 100%;
         z-index: -1;
-        margin-top: 65rem;
+        margin-top: 3rem;
     }
     .pagina91{
         display: flex;
         justify-content: center;
-        margin-top: 70rem;
+        margin-top: 7rem;
     }
     .opciones{
-        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: -5%;
+        justify-content: center;
     }
 }
+
 .fondo{
     position: absolute;
-    z-index: 900;
     width: 100%;
     height: 1000vh;
-    background: black;
-    text-align: center;
+    background:#01070a;
+    overflow: hidden;
+    align-items: center;
+    z-index: 900;
 }

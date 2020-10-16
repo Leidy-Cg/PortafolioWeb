@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Leidy Lorena Cita</title>
+    <title>CITA - Porfalio web</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flexboxgrid.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
     <link rel="shortcut icon" href="img/citalogo.png" type="image/x-icon">
     <script src="js/scripts.js"></script>
 </head>
 <body class="container">
     <div class="fondo" id="fondo"></div>
     <div class="pre-loader" id="pre-loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <img src="img/rocket.png">
     </div>
+    <script>
+        function estrellas(){
+            let count = 50;
+            let fondo = document.querySelector('.fondo');
+            let i = 0;
+            while(i < count){
+                let estrellas = document.createElement('i');
+                let x = Math.floor(Math.random() * window.innerWidth);
+
+                let duration = Math.random() * 1;
+                let h = Math.random() * 100;
+
+                estrellas.style.left = x + 'px';
+                estrellas.style.width = 1 + 'px';
+                estrellas.style.height = 50+ h +'px';
+                estrellas.style.animationDuration = duration + 's';
+                
+                fondo.appendChild(estrellas);
+                i++
+            }
+        }
+        estrellas();
+    </script>
     <header class="row header">
         <div class="col-md-2 logo1"><img src="img/logo.png"></a></div>
         <div class="col-md-10 menu">
@@ -32,14 +53,40 @@
         </ul>
     </div>
     </header>
-    <div class="portada1"><div class="row">
-    <a name="INICIO"><div class="col-md-12 portada"><img src="img/fondo3.jpg"></div></a>
+    <div div class="row">
+    <a name="INICIO"><div class="col-md-12 portada"></div></a>
     </div>
+    <script type="text/javascript">
+        function estrellitas(){
+            let count = 30;
+            let portada = document.querySelector('.portada');
+            let i = 0;
+            while(i < count){
+                let star = document.createElement("i");
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let y = Math.floor(Math.random() * window.innerHeight);
+                let duration = Math.random() * 10;
+                let size = Math.random() * 2;
+    
+                star.style.left = x+'px';
+                star.style.top = y+'px';
+                star.style.width = 1+size+'px';
+                star.style.height = 1+size+'px';
+    
+                star.style.animationDuration = 5+duration+'s';
+                star.style.animationDelay = duration+'s';
+    
+                portada.appendChild(star);
+                i++
+            }
+        }
+        estrellitas();
+    </script>
     <div class="row inicial">
         <div class="col-md-1 redessociales1">
             <div><a href="https://www.instagram.com/leidy_cg19/" target="_blank/"><img src="img/instagram.png" class="icn"></a></div>
             <div><a href="https://www.facebook.com/leiidy.citta/" target="_blank/"><img src="img/facebook.png" class="icn"></a></div>
-            <div><a href="https://wa.me/3219130455?" target="_blank/"><img src="img/whatsapp.png" class="icn"></a></div>
+            <div><a href="https://wa.me/573219130455?" target="_blank/"><img src="img/whatsapp.png" class="icn"></a></div>
         </div>
         <div class="col-md-5 retrato"><img src="img/soporte.png"class="soporte"><img src="img/Retrato2.png" class="retrato1"></div>
         <div class="col-md-6 bienvenida">
@@ -54,7 +101,7 @@
                 Ver vídeo
             </a></div>
         <div class="video" id="modal"><div class="popup">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Hqb49jksqvs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=DFnuss-qD4o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             <a href="#" class="btn-close-popup">X</a></div>
         </div>
@@ -87,7 +134,7 @@
         Descarga mi hoja de vida
     </a></div>
     </div>
-    <div class="col-md-4 retrato3">
+    <div class="col-md-4 retrato3 animate__animated animate__jackInTheBox"data-wow-duration="1s">
         <div><img src="img/soporte2.png" class="soporte2"></div>
         <div><img src="img/Retrato4.png" class="retrato4"></div></div>
     <div class="retrato6"><div><img src="img/soporte3.png" class="soporte3"></div>
@@ -176,6 +223,11 @@
     <div class="col-md-12 pagina4"></div>
     <div class="row">
         <div class="col-md-1"></div>
+        <div class="col-md-12 carrusel1">
+            <div class="imgbicicleta"><img src="img/bicicleta.jpg"></div>
+            <div class="imgcaminar"><img src="img/caminar.jpg"></div>
+            <div class="imgdibujar"><img src="img/dibujar.jpg"></div>
+        </div>
         <div class="col-md-6 pasatiempos">
             <h1>PASATIEMPOS</h1><br><br>
             <h2>Montar bicicleta</h2>
@@ -186,6 +238,7 @@
             <h3>Disfruto hacer esta actividad en compañía y envolverme en la aventura de escalar y conectarme con el medio ambiente</h3>
         </div>
         <div class="col-md-5 collage"><img src="img/collage.png"></div>
+        
         </div>
     <a name="CERTIFICADOS"><div class="col-md-12 pagina6"></div></a>
     <div class="row">
@@ -284,7 +337,7 @@
     </div>
 <div class="col-md-12 pagina8"></div><script type="text/javascript">
     function stars(){
-        let count = 300;
+        let count = 200;
         let pagina8 = document.querySelector('.pagina8');
         let i = 0;
         while(i < count){
@@ -310,7 +363,7 @@
 </script>
 <div class="row pagina81">
 <div class="col-md 1"></div>
-<div class="col-md-9 portafolio1">PORTAFOLIO</div>
+<div class="col-md-9 portafolio1"><h1 data-text="PORTAFOLIO">PROYECTOS</h1></div>
 <div class="col-md-2 logo2"><img src="img/logo2.png"></div>
 </div>
 <a name="PORTAFOLIO"><div class="col-md-12 pagina9"></div></a>
@@ -334,7 +387,7 @@
             <div class="caja filtro ilustraciones"><img src="img/gato.jpg" alt=""></div>
             <div class="caja filtro ilustraciones"><img src="img/ilustraciones3.jpg" alt=""></div>
             <div class="caja filtro fotografia"><img src="img/fotografia5.jpg" alt=""></div>
-            <div class="caja filtro audiovisual"><img src="img/gato.jpg" alt=""></div>
+            <div class="caja filtro fotografia"><img src="img/fotografia8.jpg" alt=""></div>
             <div class="caja filtro ilustraciones"><img src="img/ilustraciones4.jpg" alt=""></div>
             <div class="caja filtro fotografia"><img src="img/fotografia4.jpg" alt=""></div>
             <div class="caja filtro fotografia"><img src="img/fotografia7.jpg" alt=""></div>
@@ -343,7 +396,33 @@
     </div>
     <div class="col-md-1"></div>
 </div>
-<div class="col-md-12 pagina11"><img src="img/fondo1.jpg"></div>
+<div class="col-md-12 pagina11"></div>
+<script type="text/javascript">
+    function stars(){
+        let count = 200;
+        let pagina11 = document.querySelector('.pagina11');
+        let i = 0;
+        while(i < count){
+            let star = document.createElement("i");
+            let x = Math.floor(Math.random() * window.innerWidth);
+            let y = Math.floor(Math.random() * window.innerHeight);
+            let duration = Math.random() * 10;
+            let size = Math.random() * 2;
+
+            star.style.left = x+'px';
+            star.style.top = y+'px';
+            star.style.width = 1+size+'px';
+            star.style.height = 1+size+'px';
+
+            star.style.animationDuration = 5+duration+'s';
+            star.style.animationDelay = duration+'s';
+
+            pagina11.appendChild(star);
+            i++
+        }
+    }
+    stars();
+</script>
 <div class="row pagina111">
 <div class="col-md 1"></div>
 <div class="col-md-9 portafolio2">CONCTACTAME</div>
@@ -360,10 +439,10 @@
 <div class="col-md-4 redessociales2">
     <a href="https://www.facebook.com/leiidy.citta/" target="_blank/"><h1>FACEBOOK</h1></a>
     <a href="https://www.instagram.com/leidy_cg19/" target="_blank/"><h1>INSTAGRAM</h1></a>
-    <a href="https://wa.me/3219130455?" target="_blank/"><h1>WHATSAPP</h1></a>
+    <a href="https://wa.me/573219130455?" target="_blank/"><h1>WHATSAPP</h1></a>
 </div>
 <div class="col-md-5">
-    <form action="correo.php" method="POST">
+    <form action="correos.php" method="POST">
         <div class="form">
             <div class="grupo">
                 <input type="text" name="nombre" id="" required><span class="barra"></span>
@@ -387,8 +466,8 @@
 </div>
 <div class="col-md-1"></div>
 </div>
-    <footer class="div col-md-12 footer">
-        <div class="footerlogo"></div>
+    <footer class="div col-md-12 footer animate__animated animate__jackInTheBox"data-wow-duration="1s">
+        <div class="footerlogo"><img src="img/citalogo1.png"></div>
     </footer>
     <script src=https://code.jquery.com/jquery-3.5.1.min.js>
         Code
