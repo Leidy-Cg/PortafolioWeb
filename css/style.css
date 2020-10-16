@@ -1431,18 +1431,20 @@ input:focus~.barra::before, textarea:focus~.barra::before{
 /*responsive menu*/
 @media only screen and (max-width: 600px){
     .logo1{
-        margin-left: 15%;
+        margin-left: 12%;
+        margin-top: 5%;
     }
     .header{
         display: flex;
         height: 8%;
+        justify-content: space-between;
     }
     .menu-icono{
-        display: absolute;
+        display: block;
         z-index: 30;
         cursor: pointer;
-        margin-left: -10%;
-        padding: 0.5rem 0;
+        margin-left: 80%;
+        margin-top: -50px;
     }
     .menu{
         width: 100%;
@@ -1462,7 +1464,11 @@ input:focus~.barra::before, textarea:focus~.barra::before{
         display: block;
         padding: 0.5rem 0;
         transition: all 0.4s linear;
-        border-radius: px;
+        border-radius: 5px;
+        background-color: black;
+        line-height: 20px;
+        width: 100%;
+        text-align: center;
     }
     .menu ul li a:hover{
         background: #4a4a4a;
