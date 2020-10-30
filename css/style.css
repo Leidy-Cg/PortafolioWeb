@@ -2,6 +2,10 @@
     box-sizing: border-box;
     margin: 0;
 }
+html{
+    scroll-behavior: smooth;
+    transition-timing-function: ease-in-out;
+}
 body{  
     font-family: 'Oswald', sans-serif;
     max-width: 1500px;
@@ -1175,7 +1179,7 @@ p{
     margin-top: 7rem;
 }
 .pagina9{
-    height: 1100px;
+    height: 1200px;
     position: absolute;
     background-color:#F2F2F2;
     width: 100%;
@@ -1191,7 +1195,6 @@ p{
     margin-top: -6rem;
     width: 100%;
     overflow: hidden;
-    margin-left: 4rem;
 }
 .opciones ul{
     position: relative;
@@ -1219,7 +1222,6 @@ p{
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: -1rem; 
-    margin-left: 3rem;
 }
 .imagenes1 caja{
     width: 35%;
@@ -1237,6 +1239,29 @@ p{
     transition: all ease 1.5s;
     cursor: pointer;
 }
+
+.testimonios a{
+    position: relative;
+    display: flex;
+    padding: 10px 20px;
+    color: #F2F2F2;
+    background: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.1s;
+    top: 30px;
+    border-radius: 4px;
+    margin-left: 43%;
+}
+.testimonios a:hover{
+        color: #ffffff;
+        background: #4a4a4a;
+        box-shadow: 0 0 5px #3E5151, 0 0 20px #3E5151, 0 0 40px #3E5151;
+        transition-delay: 0.5s;
+    }
 .pagina11{
     position: absolute;
     z-index: -1;
@@ -1724,7 +1749,87 @@ input:focus~.barra::before, textarea:focus~.barra::before{
         justify-content: center;
     }
 }
-
+.index2{
+    margin: 0 150px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background: #111;
+}
+.testimonials{
+    position: relative;
+    max-width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    min-height: 350px;
+    margin: 0 20px;
+    background: #fff;
+}
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right{
+    background-image: none;
+}
+.testimonials .card{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: #333;
+    padding: 60px 40px;
+    text-align: center;
+    overflow: hidden;
+}
+.testimonials .card .layer{
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#03a9f4, #e91ee3);
+    z-index: 1;
+    transition: 0.5s;
+}
+.testimonials .card:hover .layer{
+    top: 0;
+}
+.testimonials .card .content{
+    position: relative;
+    z-index: 2;
+}
+.testimonials .card .content p{
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.testimonials .card .content .imgBx{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.testimonials .card .content h2{
+    font-size: 18px;
+    color: #fff;
+}
+.testimonials .card .content h2 span{
+    color: #03a9f4;
+    font-size: 14px;
+    transition: 0.5s;
+}
+.testimonials .card:hover .content h2 span{
+    color: #fff;
+}
 .fondo{
     position: absolute;
     width: 100%;
